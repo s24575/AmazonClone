@@ -59,7 +59,8 @@
 
 .header__search {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
+    width: 100%;
     align-items: center;
     border-radius: 24px;
     padding: 10px 4px 10px 3px;
@@ -68,6 +69,8 @@
 }
 
 .header__searchInput {
+    display: flex;
+    flex: 1 1 0px;
     height: 20px;
     padding: 10px;
     border: none;
@@ -75,13 +78,15 @@
     border-radius: 4px 0 0 4px;
 }
 
-.header__searchIcon {
-    padding: 5px;
-    width: 35px !important;
-    height: 30px !important;
+.header__searchSprite {
+    width: 45px;
+    height: 40px;
+    background-position: 2px -280px;
+    background-image: url(https://m.media-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png);
     background-color: #febd69;
     border-radius: 0 4px 4px 0;
 }
+
 /* FILL END*/
 /* RIGHT */
 .header__right {

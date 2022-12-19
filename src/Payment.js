@@ -25,7 +25,7 @@ function Payment() {
     const getClientSecret = async () => {
       const response = await axios({
         method: "post",
-        url: "/payments/create?total=${getBasketTotal(basket) * 100 }",
+        url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
       });
       setClientSecret(response.data.clientSecret);
     };
@@ -62,7 +62,7 @@ function Payment() {
         <h1>
           Checkout (
           <Link to="/checkout">
-            {basket?.length} {basket?.length == 1 ? "item" : "items"}
+            {basket?.length} {basket?.length === 1 ? "item" : "items"}
           </Link>
           )
         </h1>
