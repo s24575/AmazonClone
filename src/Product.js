@@ -1,14 +1,16 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import { v4 as uuidv4 } from "uuid";
 
 function Product({ id, title, image, price, rating }) {
-  const [{}, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
+        uuid: uuidv4(),
         id: id,
         title: title,
         image: image,
@@ -29,8 +31,8 @@ function Product({ id, title, image, price, rating }) {
         <div className="product__rating">
           {Array(rating)
             .fill()
-            .map(() => (
-              <p>⭐</p>
+            .map((_, i) => (
+              <p key={i}>⭐</p>
             ))}
         </div>
       </div>
