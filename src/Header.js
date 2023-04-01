@@ -14,7 +14,7 @@ function Header() {
   };
 
   return (
-    <header className="header">
+    <div className="header">
       <div className="header__left">
         <div id="header__logo">
           <Link to="/" className="header__logoLink">
@@ -56,7 +56,7 @@ function Header() {
           </Link>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 

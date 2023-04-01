@@ -23,7 +23,6 @@ function Login() {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-        console.log(auth);
         if (auth) {
           navigate("/");
         }
@@ -67,11 +66,7 @@ function Login() {
           By creating an account, you agree to Amazon's Conditions of Use and
           Privacy Notice.
         </p>
-        <button
-          type="submit"
-          onClick={register}
-          className="login__registerButton"
-        >
+        <button onClick={register} className="login__registerButton">
           Create your Amazon account
         </button>
       </div>

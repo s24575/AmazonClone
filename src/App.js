@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import Checkout from "./Checkout";
 import Login from "./Login";
 import Payment from "./Payment";
+import Orders from "./Orders";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
@@ -33,7 +33,7 @@ function App() {
         });
       }
     });
-  }, [dispatch]);
+  }, []);
 
   return (
     <Router>
@@ -66,6 +66,15 @@ function App() {
                 <Elements stripe={promise}>
                   <Payment />
                 </Elements>
+              </>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <>
+                <Header />
+                <Orders />
               </>
             }
           />
