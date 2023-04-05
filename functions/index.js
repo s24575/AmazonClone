@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-dotenv.config();
+dotenv.config({ path: "../.env" });
 
 const functions = require("firebase-functions");
 const express = require("express");
@@ -36,4 +36,4 @@ app.post("/payments/create", async (request, response) => {
 // Listen command
 exports.api = functions.https.onRequest(app);
 
-//http://127.0.0.1:5001/clone-a4c40/us-central1/api
+// http://127.0.0.1:5001/clone-a4c40/us-central1/api

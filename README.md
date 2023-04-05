@@ -9,4 +9,4 @@ Please note that it might be a few commits behind.
 
 ### Comments
 
-The backend has not been implemented yet, I'm planning on doing that soon.
+The backend still has some issues with processing payments due to problems with Stripe secret keys.
